@@ -208,7 +208,7 @@ void KeybindsManager::handleKeyDown(cocos2d::enumKeyCodes key) {
 
 #ifdef GLOBED_VOICE_CAN_TALK
     if (key == m_kVoice) {
-        gjbgl->resumeVoiceRecording();
+        gjbgl->pauseVoiceRecording();
     } else if (key == m_kDeafen) {
         gjbgl->toggleDeafen();
     }
@@ -231,7 +231,7 @@ void KeybindsManager::handleKeyUp(cocos2d::enumKeyCodes key) {
 
 #ifdef GLOBED_VOICE_CAN_TALK
     if (key == m_kVoice) {
-        gjbgl->pauseVoiceRecording();
+        gjbgl->resumeVoiceRecording();
     }
 #endif
 }
